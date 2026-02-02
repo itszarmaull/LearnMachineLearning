@@ -1,109 +1,124 @@
 """
-QUIZ LOGIC PYTHONIC
-Materi:
-1. Swapping Value
-2. Chained Comparison
-3. Packing Nilai
-4. Unpacking Nilai
-5. For Loop Pythonic
-6. Enumerate For Loop
-
-RULES:
-- Jangan pakai solusi konvensional
-- Utamakan gaya pythonic
-- Jangan lihat jawaban dulu 
+LOGIC TRAINING – LEVEL 1
+Fokus:
+- Chained Comparison
+- For Loop Pythonic
+- Enumerate
+- Packing & Unpacking
+- Mindset logika (bukan hafalan)
 """
 
-print("="*50)
-print("QUIZ LOGIC PYTHONIC")
-print("="*50)
+print("="*55)
+print("LOGIC TRAINING – LEVEL 1")
+print("="*55)
 
 # ======================================
-# SOAL 1 — SWAPPING VALUE
+# SOAL 1 — RANGE LOGIC (WARM UP)
 # ======================================
-print("\n[SOAL 1] Swapping Value")
+print("\n[SOAL 1] Range Logic")
 
-x = 5
-y = 9
-
-print(f"Sebelum: x={x}, y={y}")
-
-# TODO: Tukar nilai x dan y (tanpa variabel tambahan)
-x,y = y,x
-print(f"Sesudah: x={x}, y={y}")
-
-
-# ======================================
-# SOAL 2 — CHAINED COMPARISON
-# ======================================
-print("\n[SOAL 2] Chained Comparison")
-
-nilai = 76
-
-#todo
-# Cetak "Lulus" jika nilai di antara 70 dan 85
-print(70<= nilai >= 85)
-# Cetak "Tidak Lulus" jika tidak memenuhi
-
-
-# ======================================
-# SOAL 3 — PACKING SEKUMPULAN NILAI
-# ======================================
-print("\n[SOAL 3] Packing Nilai")
-
-a = 2
-b = 4
-c = 6
-
-# TODO:
-# Masukkan a, b, c ke dalam satu list bernama data
-data = [a,b,c]
-
-print("Data:", data)
-
-
-# ======================================
-# SOAL 4 — UNPACKING SEKUMPULAN NILAI
-# ======================================
-print("\n[SOAL 4] Unpacking Nilai")
-
-data2 = [100, 200, 300]
-
-# todo
-# Ambil isi data2 ke variabel x, y, z
-x,y,z = data2
-
-print(f"x={x}, y={y}, z={z}")
-
-
-# ======================================
-# SOAL 5 — FOR LOOP PYTHONIC
-# ======================================
-print("\n[SOAL 5] For Loop Pythonic")
-
-buah = ['apel', 'jeruk', 'mangga']
-
-#tODO:
-# Tampilkan semua isi list tanpa range() dan len()
-
-for item in buah : 
-    print(f'{item}')
-# ======================================
-# SOAL 6 — ENUMERATE FOR LOOP
-# ======================================
-print("\n[SOAL 6] Enumerate For Loop")
-
-nama = ['andi', 'budi', 'citra']
+angka = 12
 
 # tODO:
-# Tampilkan output:
-# 1. andi
-# 2. budi
-# 3. citra
-# (gunakan enumerate)
-for i, nama_data in enumerate(nama) :
-    print(f'{i+1}.{nama_data} ')
+if(10 <= angka <=20) :
+    print('Aman')
+else :
+    print("Bahaya")
+# Cetak "AMAN" jika angka di antara 10 dan 20
+# Cetak "BAHAYA" jika di luar rentang
 
 
-print("\n=== SELESAI ===")
-print("Kalau sudah, kirim kodenya ke gue buat dicek 💪🔥")
+# ======================================
+# SOAL 2 — FILTER DATA (LOGIC DATA)
+# ======================================
+print("\n[SOAL 2] Filter Data")
+
+data = [3, 7, 12, 18, 25, 30]
+
+#tODO:
+# Tampilkan HANYA angka yang berada di antara 10 dan 25
+for i, data_loop in enumerate (data) : 
+    if(10<= data_loop <= 25) : 
+        print(data_loop)
+# (gunakan for loop pythonic)
+
+
+# ======================================
+# SOAL 3 — ENUMERATE + LOGIC
+# ======================================
+print("\n[SOAL 3] Enumerate + Logic")
+
+nilai = [55, 72, 81, 90, 66]
+
+#tODO:
+# Tampilkan hanya nilai yang LULUS
+# Syarat lulus: nilai >= 70
+for i, data_nilai in enumerate(nilai) : 
+    if(data_nilai >= 70 ) : 
+        print(f'Data Ke-{i+1} LULUS {data_nilai}')
+    else :
+        print(f'Data Ke-{i+1}, TIDAK LULUS {data_nilai}')
+# Format output:
+# Data ke-2 LULUS (72)
+# Data ke-3 LULUS (81)
+# dst...
+
+
+# ======================================
+# SOAL 4 — PACKING & UNPACKING LOGIC
+# ======================================
+print("\n[SOAL 4] Packing & Unpacking")
+
+x = 1
+y = 2
+z = 3
+
+# tODO:
+# 1. Packing x, y, z ke dalam list
+list = [x,y,z]
+print(f'Packing ke list : {list} ')
+# 2. Unpack kembali ke variabel a, b, c
+a,b,c = list;
+# 3. Cetak hasilnya
+print('Unpacking : ')
+print(f'a={a}, b={b}, c={c}')
+
+
+# ======================================
+# SOAL 5 — RELASI 2 LIST (LOGIC SEJAJAR)
+# ======================================
+print("\n[SOAL 5] Relasi 2 List")
+
+nim = ['A01', 'A02', 'A03', 'A04']
+nilai = [65, 80, 45, 90]
+
+# tODO:
+# Tampilkan:
+for i, n in enumerate(nilai) : 
+    if(n >=70) : 
+        print(f'{nim[i]} -- LULUS')
+    else : 
+        print(f'{nim[i]} -- Tidak Lulus ')
+# A02 - LULUS
+# A04 - LULUS
+# (nilai >= 70)
+
+
+# ======================================
+# SOAL 6 — MINDSET ERROR CHECKING
+# ======================================
+print("\n[SOAL 6] Error Checking")
+
+angka_list = [5, 10, 15, 20, 25]
+
+# tODO:
+# Tampilkan hanya angka yang:
+for item in angka_list : 
+    if(22 <= item >= 8) :
+        print(item) 
+# - lebih besar dari 8
+# - lebih kecil dari 22
+
+
+print("\n=== SELESAI LEVEL 1 ===")
+print("Pelan tapi konsisten = ML engineer mindset 🧠🔥")
