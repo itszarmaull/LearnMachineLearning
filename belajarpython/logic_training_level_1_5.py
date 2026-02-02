@@ -72,7 +72,7 @@ angka = [5, 8, 12, 18, 25, 30]
 # lebih besar dari 7
 # dan lebih kecil dari 20
 for n in angka :
-    if(7<= n <=20) : 
+    if(7< n <20) : 
         print(n)
 print("\n=== SELESAI LEVEL 1.5 ===")
 print("Fokus dikit-dikit tapi dalem 🧠🔥")
